@@ -1,0 +1,49 @@
+1) typos in function name (e.g., c0ut)
+
+01-Andrea_Lorenzon.cpp: In function ‘int main()’:
+01-Andrea_Lorenzon.cpp:6:5: error: ‘c0ut’ was not declared in this scope
+     c0ut << "Hello, World!";
+     ^~~~
+
+2) typos in variable name
+
+01-Andrea_Lorenzon.cpp: In function ‘int main()’:
+01-Andrea_Lorenzon.cpp:8:18: error: ‘b’ was not declared in this scope
+     std::cout << b << std::endl;
+                  ^
+
+3)forget to put ;
+
+01-Andrea_Lorenzon.cpp: In function ‘int main()’:
+01-Andrea_Lorenzon.cpp:9:5: error: expected ‘;’ before ‘return’
+     return 0;
+     ^~~~~~
+
+
+4)forget to #include <iostream>
+
+01-Andrea_Lorenzon.cpp: In function ‘int main()’:
+01-Andrea_Lorenzon.cpp:7:10: error: ‘string’ is not a member of ‘std’
+     std::string a ("string");
+          ^~~~~~
+01-Andrea_Lorenzon.cpp:8:10: error: ‘cout’ is not a member of ‘std’
+     std::cout << a << std::endl;
+          ^~~~
+01-Andrea_Lorenzon.cpp:8:18: error: ‘a’ was not declared in this scope
+     std::cout << a << std::endl;
+                  ^
+01-Andrea_Lorenzon.cpp:8:28: error: ‘endl’ is not a member of ‘std’
+     std::cout << a << std::endl;
+                            ^~~~
+
+5) declare a variable with illegal name like int double {0};
+
+01-Andrea_Lorenzon.cpp:4:11: error: expected unqualified-id before ‘{’ token
+ int double{0};
+           ^
+
+6) pass wrong type of argument to a function
+
+01-Andrea_Lorenzon.cpp:5:9: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]
+ int b = "asd";
+         ^~~~~
