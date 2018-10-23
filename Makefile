@@ -1,16 +1,21 @@
 # Simple Makefile to compile, clean and format all the sample codes
 # provided during the course of Advanced Programming
+CXX = g++
+CXXFLAGS = -Wall -Wextra  -std=c++11 -O3  # warning verbose, always read the warning. c++14 perchè usiamo auto 
 
-default: all
+SRC =linkedlists.cc
+EXE = $(SRC:.cc=.x)              # same name, but .x
 
-all: 
-	+$(MAKE) $@ -C lectures
+.PHONY: clean default
+	
+default: $(EXE)
+
+%.x:%.cc
+	$(CXX) $(CXXFLAGS)  $< -o $@
+
 
 clean:
-	+$(MAKE) $@ -C lectures
-	@find . -type f \( -name '*~' -o -name 'a.out' \) -exec rm '{}' \;
+	rm -rf *~ $(EXE) 			# occhio agli spazi
 
-format:
-	+$(MAKE) $@ -C lectures
-
-.PHONY: all clean format default
+# $< = all dependencies
+# $@ = the file itself
