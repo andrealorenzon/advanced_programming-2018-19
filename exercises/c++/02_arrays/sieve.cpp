@@ -17,7 +17,8 @@ class EArray
 
 		void push(const T & newval); 			// insert newval as array[max_i+1]
 		void output();							// print array elements
-		void tuptou();							// print array elements in reversed order
+		void tuptou();
+		void remove(int i);							// print array elements in reversed order
 
 };
 
@@ -72,6 +73,29 @@ void EArray<T>::tuptou()   // reversed output
 	cout << endl;
 }
 
+template<class T>
+void EArray<T>::remove() {
+
+	
+}
+
+bool isprime(int n) {
+
+	bool isPrime = true;
+
+	for(int i = 2; i <= n / 2; ++i)
+	{
+	    if(n % i == 0)
+	    {
+	        isPrime = false;
+	        break;
+	    }
+	}
+	return isPrime;
+
+
+}
+
 int main(int argc, char const *argv[])
 {
 	
@@ -112,22 +136,20 @@ int main(int argc, char const *argv[])
 	cout << "----------" << endl;
 */
 // fine test
-	int size;
-	string value;
+	int n;
+	
+	cout << "Enter a number, I will tell you all primes up to that number: " << endl;
+	cout << "\n >> " ;
+	cin >> n;
 
-	cout << "How many elements do you want to put in your array?" << endl;
-	cin >> size;
+	EArray<int> array(0); // fix that to work dinamically between types
 
-	EArray<float> array(0); // fix that to work dinamically between types
-
-	for (int i = 0; i < size; ++i)
+	for (int i = 0; i <= n; i++)
 	{
-		
-		cout << "type next number: ";
-		cin >> value;
-		array.push(stof(value));
+		array.push(i);
 	}
-	array.output();
+//	array.output();
+	
 
 	
 
