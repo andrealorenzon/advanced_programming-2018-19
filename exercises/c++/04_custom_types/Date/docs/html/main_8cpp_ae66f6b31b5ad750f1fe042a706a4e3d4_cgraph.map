@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$class_date.html#a9bbef2324d8fff46cece38769a24f94d" title="Prints the date in standard output, using 3 characters for the month. " alt="" coords="109,5,192,32"/>
+<area shape="rect" id="node5" href="$class_date.html#a7b381763ddaf6005fb04c81649487dd8" title="add n days to a date, taking in to accout new months " alt="" coords="104,56,197,83"/>
+<area shape="rect" id="node3" href="$class_date.html#ad2c9df467f4ff19935cbaff6f571763d" title="getter of day " alt="" coords="253,56,332,83"/>
+<area shape="rect" id="node4" href="$class_date.html#ac992d81ac59411d739fe4d83ddb8f330" title="getter of year " alt="" coords="251,5,334,32"/>
+<area shape="rect" id="node6" href="$class_date.html#ace3f46fcf681b0c7b05024df823565d2" title="getter of month: to be rewritten later using enum " alt="" coords="245,107,340,133"/>
+</map>
